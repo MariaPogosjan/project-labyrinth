@@ -35,7 +35,7 @@ const games = createSlice({
 export const generateGame = (name) => {
   return (dispatch) => {
     dispatch(games.actions.setLoading(true))
-    fetch('https://wk16-backend.herokuapp.com/start', {
+    fetch('https://labyrinth.technigo.io/start', {
         method: 'POST',
         headers: {
           'Content-type': 'application/json'
@@ -65,7 +65,7 @@ export const generateGame = (name) => {
 export const generateMove = (name, directionMove) => {
   return (dispatch) => {
     dispatch(games.actions.setLoading(true))
-    fetch('https://wk16-backend.herokuapp.com/action', {
+    fetch('https://labyrinth.technigo.io/action', {
         method: 'POST',
         headers: {
           'Content-type': 'application/json'
